@@ -60,7 +60,8 @@ inline std::string get_input_path(const std::string &day_str) {
 }
 
 // Запись ответов в answer.txt для текущего дня
-inline void write_answers(const std::string &day_str, int part1, int part2) {
+template <typename T1 = int, typename T2 = int>
+inline void write_answers(const std::string &day_str, T1 part1, T2 part2) {
     std::filesystem::path answer_path(std::string(AOC_PROJECT_ROOT) + "/days/" + day_str + "/answer.txt");
     std::filesystem::create_directories(answer_path.parent_path());
     std::ofstream file(answer_path);
