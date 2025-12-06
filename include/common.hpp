@@ -40,6 +40,25 @@ inline std::vector<std::string> split(const std::string &s, char delimiter = ' '
     return tokens;
 }
 
+// Разделение строки по пустым символам
+inline std::vector<std::string> split2(const std::string &line) {
+    std::istringstream iss(line);
+    std::vector<std::string> tokens;
+    std::string token;
+    while (iss >> token) {
+        tokens.push_back(token);
+    }
+    return tokens;
+}
+
+// Обрезание строки
+inline std::string trim(const std::string &source) {
+    std::string s(source);
+    s.erase(0, s.find_first_not_of(" \n\r\t"));
+    s.erase(s.find_last_not_of(" \n\r\t") + 1);
+    return s;
+}
+
 // Преобразование строки в число (с проверкой)
 template <typename T>
 inline T to_num(const std::string &s) {
