@@ -105,7 +105,7 @@ uint64_t part1() {
 
     uint64_t result = 1;
     for (int i = 0; i < 3; ++i)
-        result *= (i < sizes.size() ? result *= sizes[i] : 1);
+        result *= (i < sizes.size() ? sizes[i] : 1);
 
     std::cout << "  Part 1: " << result << std::endl;
     return result;
