@@ -13,6 +13,7 @@ DECLARE_DAY(04)
 DECLARE_DAY(05)
 DECLARE_DAY(06)
 DECLARE_DAY(07)
+DECLARE_DAY(08)
 
 void run_day(int day) {
     std::cout << "Day " << day << std::endl;
@@ -38,6 +39,9 @@ void run_day(int day) {
     case 7:
         day07::solve();
         break;
+    case 8:
+        day08::solve();
+        break;
     default:
         std::cerr << "Day " << day << " is not implemented yet." << std::endl;
         std::exit(1);
@@ -45,7 +49,7 @@ void run_day(int day) {
 }
 
 int main(int argc, char *argv[]) {
-    int day = 7;
+    int day = 8;
     run_day(day);
     return 0;
 }
